@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //User peut avoir que un Clubs
+    function clubUser(){
+        return $this->hasOne(Clubs::class);
+    }
 }

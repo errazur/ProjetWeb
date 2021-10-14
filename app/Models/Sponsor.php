@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Sponsor extends Model
 {
     use HasFactory;
+
+
+
+
+    //Les sponsor le sont sur plusieurs Clubs
+    function ClubSponsor(){
+        return $this->BelongsTo(Clubs::class);
+    }
 }
