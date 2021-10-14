@@ -19,13 +19,13 @@ class CreateClubsTable extends Migration
             $table->String('initial',4);
             $table->String('nom_stade',40);
             $table->bigInteger('Argent')->default(50);
-            $table->bigInteger('Points');
+            $table->bigInteger('Points')->default(0);
             $table->foreignId('user_id')->constrained();
             $table->enum('Ligue', ['Bronze', 'Argent', 'Or'])->default('Bronze');
-            $table->foreignId('stade_id')->constrained();
-            $table->foreignId('centre_entrainement_id')->constrained();
-            $table->foreignId('centre_jeune_id')->constrained();
-            $table->foreignId('sponsor_id')->constrained()->nullable();
+            $table->foreignId('stade_id')->default(1)->constrained();
+            $table->foreignId('centre_entrainement_id')->default(1)->constrained();
+            $table->foreignId('centre_jeune_id')->default(1)->constrained();
+            $table->foreignId('sponsor_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
