@@ -9,6 +9,21 @@ class Joueur extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nom',
+        'prenom',
+        'age',
+        'poste',
+        'vitesse',
+        'dribble',
+        'tir',
+        'passe',
+        'defense',
+        'physique',
+        'forme',
+        'energie',
+    ];
+
 
     // Les joueurs sont à un Club
     function joueurClub(){
