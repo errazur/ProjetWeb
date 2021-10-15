@@ -1,12 +1,3 @@
-<?php
-use App\Models\Club;
-use App\Models\User;
-use Carbon\Carbon;
-
-$ClubUser = Club::where('id', Auth::id())->first();
-
-?>
-
 <nav x-data="{ open: false }" class="bg-violet-pastel">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +16,7 @@ $ClubUser = Club::where('id', Auth::id())->first();
 
 
                 <div id="date" class="flex items-center">
-                    {{ Carbon::now()->format('d-m-Y') }}
+                    {{ \Carbon\Carbon::now()->format('d-m-Y') }}
                 </div>
 
                 <div id="date" class="flex items-center">

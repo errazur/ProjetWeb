@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\crea_club_joueurController;
 use App\Models\Club;
 use App\Models\User;
+use App\Models\Joueur;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\crea_club_joueurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,43 +29,55 @@ Route::get('/creation', [crea_club_joueurController::class, 'indexAction'])->nam
 Route::post('/creation', [crea_club_joueurController::class, 'CreationClub']);
 
 Route::get('/Accueil', function () {
-    return view('accueil-connecter');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('accueil-connecter',compact('ClubUser'));
 })->name('Accueil');
 
 Route::get('/Notification', function () {
-    return view('notification');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('notification', compact('ClubUser'));
 })->name('notification');
 
 Route::get('/Ligue', function () {
-    return view('ligue');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('ligue', compact('ClubUser'));
 })->name('ligue');
 
 Route::get('/Effectif', function () {
-    return view('effectif');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('effectif', compact('ClubUser'));
 })->name('effectif');
 
 Route::get('/Tactique', function () {
-    return view('tactics');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    $effectifUser = Joueur::where('club_id', $ClubUser)->get();
+    return view('tactics', compact('ClubUser'));
 })->name('tactique');
 
 Route::get('/Entrainement', function () {
-    return view('entrainement');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    $effectifUser = Joueur::where('club_id', $ClubUser)->get();
+    return view('entrainement', compact('ClubUser'));
 })->name('entrainement');
 
 Route::get('/Structure', function () {
-    return view('structure');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('structure', compact('ClubUser'));
 })->name('structure');
 
 Route::get('/transfere', function () {
-    return view('transfere');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('transfere', compact('ClubUser'));
 })->name('transfere');
 
 Route::get('/Finance', function () {
-    return view('finance');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('finance', compact('ClubUser'));
 })->name('finance');
 
 Route::get('/Jeune', function () {
-    return view('jeune');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('jeune', compact('ClubUser'));
 })->name('jeune');
 
 Route::get('/dashboard', function () {

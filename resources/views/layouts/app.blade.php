@@ -28,43 +28,43 @@
             <aside class="flex flex-col bg-violet-pastel m-4 py-1 px-2 box-border justify-around w-36">
 
                     {{-- Home : --}}
-                    <x-responsive-nav-link href="" alt="Home"><img src=" {{ URL::asset('/images/home.svg') }}" alt="Home"
+                    <x-responsive-nav-link href="{{ route('Accueil')}}" alt="Home"><img src=" {{ URL::asset('/images/home.svg') }}" alt="Home"
                             class="img-responsive mb-2 w-full" /></x-nav-link>
 
                     {{-- Notifications : --}}
-                    <x-responsive-nav-link href="" alt="Notifications"><img src="{{ URL::asset('/images/notification.svg') }}"
+                    <x-responsive-nav-link href="{{ route('notification')}}" alt="Notifications"><img src="{{ URL::asset('/images/notification.svg') }}"
                             alt="Notification" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Ligue : --}}
-                    <x-responsive-nav-link href="" alt="Ligue"><img src="{{ URL::asset('/images/Ligue.svg') }}" alt="Ligue"
+                    <x-responsive-nav-link href="{{ route('ligue')}}" alt="Ligue"><img src="{{ URL::asset('/images/Ligue.svg') }}" alt="Ligue"
                             class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Effectifs : --}}
-                    <x-responsive-nav-link href="" alt="Effectifs"><img src="{{ URL::asset('/images/effectif.svg') }}"
+                    <x-responsive-nav-link href="{{ route('effectif')}}" alt="Effectifs"><img src="{{ URL::asset('/images/effectif.svg') }}"
                             alt="Effectifs" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Tactiques : --}}
-                    <x-responsive-nav-link href="" alt="Tactiques"><img src="{{ URL::asset('/images/tactics.svg') }}"
+                    <x-responsive-nav-link href="{{ route('tactique')}}" alt="Tactiques"><img src="{{ URL::asset('/images/tactics.svg') }}"
                             alt="Tactiques" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Entrainements : --}}
-                    <x-responsive-nav-link href="" alt="Entrainements"><img src="{{ URL::asset('/images/training.png') }}"
+                    <x-responsive-nav-link href="{{ route('entrainement')}}" alt="Entrainements"><img src="{{ URL::asset('/images/training.png') }}"
                             alt="Entrainements" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Stades : --}}
-                    <x-responsive-nav-link href="" alt="Stades"><img src="{{ URL::asset('/images/stadium.svg') }}" alt="Stade"
+                    <x-responsive-nav-link href="{{ route('structure')}}" alt="Stades"><img src="{{ URL::asset('/images/stadium.svg') }}" alt="Stade"
                             class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Transfers : --}}
-                    <x-responsive-nav-link href="" alt="Transfers"><img src="{{ URL::asset('/images/transfere.svg') }}"
+                    <x-responsive-nav-link href="{{ route('transfere')}}" alt="Transfers"><img src="{{ URL::asset('/images/transfere.svg') }}"
                             alt="Transfère" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Finances : --}}
-                    <x-responsive-nav-link href="" alt="Finances"><img src="{{ URL::asset('/images/finance.svg') }}"
+                    <x-responsive-nav-link href="{{ route('finance')}}" alt="Finances"><img src="{{ URL::asset('/images/finance.svg') }}"
                             alt="Finance" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Centre des jeunes : --}}
-                    <x-responsive-nav-link href="" alt="Centre des jeunes"><img src="{{ URL::asset('/images/jeune.svg') }}"
+                    <x-responsive-nav-link href="{{ route('jeune')}}" alt="Centre des jeunes"><img src="{{ URL::asset('/images/jeune.svg') }}"
                             alt="Centre des jeunes" class="img-responsive w-24 mb-2" /></x-nav-link>
 
             </aside>

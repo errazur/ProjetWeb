@@ -16,7 +16,7 @@ class Club extends Model
     }
 
     // Le Club peut avoirs plusieurs joueur
-    function joueur(){
+    function joueurs(){
         return $this->hasMany(Joueur::class);
     }
 
