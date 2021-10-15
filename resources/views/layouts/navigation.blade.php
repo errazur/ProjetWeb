@@ -5,8 +5,6 @@ use Carbon\Carbon;
 
 $ClubUser = Club::where('id', Auth::id())->first();
 
-$date = Carbon::now()->format('d-m-Y');
-
 ?>
 
 <nav x-data="{ open: false }" class="bg-violet-pastel">
@@ -27,7 +25,7 @@ $date = Carbon::now()->format('d-m-Y');
 
 
                 <div id="date" class="flex items-center">
-                    {{ $date }}
+                    {{ Carbon::now()->format('d-m-Y') }}
                 </div>
 
                 <div id="date" class="flex items-center">

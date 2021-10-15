@@ -25,19 +25,7 @@ Route::get('/', function () {
 
 Route::get('/creation', [crea_club_joueurController::class, 'indexAction'])->name('Creation');
 
-Route::post('/creation', function () {
-
-    $data = request()->validate([
-        'nom' => 'required',
-        'initial' => 'max:4|required',
-        'nom_stade' => 'required',
-    ]);
-    $data['user_id'] = Auth::user()->id;
-
-    $club = Club::create($data);
-
-    return redirect('/Accueil');
-});
+Route::post('/creation', [crea_club_joueurController::class, 'CreationClub']);
 
 Route::get('/Accueil', function () {
     return view('accueil-connecter');
