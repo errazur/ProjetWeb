@@ -21,7 +21,8 @@ use App\Http\Controllers\crea_club_joueurController;
 
 
 Route::get('/', function () {
-    return view('index');
+    $ClubUser = Club::where('id', Auth::id())->first();
+    return view('index', compact('ClubUser'));
 })->name('Home');
 
 Route::get('/creation', [crea_club_joueurController::class, 'indexAction'])->name('Creation');
