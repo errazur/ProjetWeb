@@ -26,7 +26,7 @@ class JoueurFactory extends Factory
             'nom' => $this->faker->lastName(),
             'prenom' => $this->faker->firstName(),
             'age' => random_int(18, 28),
-            'forme' => 100,
+            'forme' => 10,
             'energie' => 100,
 
 

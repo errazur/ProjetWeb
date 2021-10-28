@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     //User peut avoir que un Clubs
     function clubUser(){
-        return $this->hasOne(Clubs::class);
+        return $this->hasOne(Club::class);
     }
 }

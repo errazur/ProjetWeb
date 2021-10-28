@@ -20,12 +20,12 @@
                 </div>
 
                 <div id="date" class="flex items-center">
-                    {{ $ClubUser->nom }} FC
+                    {{ $clubuser->nom }} FC
                 </div>
 
                 <div id="Argent_club" class="flex flex-row items-center">
-                    {{ $ClubUser->Argent }}M <img src="{{ URL::asset('/images/dollars.svg') }}" alt=""
-                        class="img-responsive h-10" />
+                    <img src="{{ URL::asset('/images/dollars.svg') }}" alt=""
+                        class="img-responsive h-10" /> {{ $clubuser->Argent }}M
                 </div>
 
                 <div class="hidden sm:flex sm:items-center sm:ml-6">

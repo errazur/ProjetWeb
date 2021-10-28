@@ -25,11 +25,11 @@
         <div class="flex flex-1">
 
             <!-- Side Bar -->
-            <aside class="flex flex-col bg-violet-pastel m-4 py-1 px-2 box-border justify-around w-36">
+            <aside class="flex flex-col bg-violet-pastel m-4 py-1 px-2 box-border justify-around w-28">
 
                     {{-- Home : --}}
                     <x-responsive-nav-link href="{{ route('Accueil')}}" alt="Home"><img src=" {{ URL::asset('/images/home.svg') }}" alt="Home"
-                            class="img-responsive mb-2 w-full" /></x-nav-link>
+                            class="img-responsive mb-2 w-24" /></x-nav-link>
 
                     {{-- Notifications : --}}
                     <x-responsive-nav-link href="{{ route('notification')}}" alt="Notifications"><img src="{{ URL::asset('/images/notification.svg') }}"
@@ -56,7 +56,7 @@
                             class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Transfers : --}}
-                    <x-responsive-nav-link href="{{ route('transfere')}}" alt="Transfers"><img src="{{ URL::asset('/images/transfere.svg') }}"
+                    <x-responsive-nav-link href="{{ route('transfert')}}" alt="Transfers"><img src="{{ URL::asset('/images/transfere.svg') }}"
                             alt="Transfère" class="img-responsive w-24 mb-2" /></x-nav-link>
 
                     {{-- Finances : --}}
@@ -69,7 +69,7 @@
 
             </aside>
             <!-- Page Content -->
-            <div class="flex flex-col bg-violet-pastel py-6 px-4 sm:px-6 lg:px-8 m-4">
+            <div class="flex flex-1 flex-col bg-violet-pastel py-6 px-4 sm:px-6 lg:px-8 m-4">
                 @yield('content')
             </div>
         </div>

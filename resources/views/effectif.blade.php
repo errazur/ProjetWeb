@@ -13,7 +13,7 @@
 
         <div class="m-4 container">
             <ul>
-                @foreach($ClubUser->joueurs as $joueurs)
+                @foreach($clubuser->joueurs as $joueurs)
                     <li>
                         <div class="flex flex-row place-items-stretch justify-around">
                             <div>
@@ -39,7 +39,7 @@
                 @endforeach
             </ul>
         </div>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum eum expedita earum. Hic inventore, eligendi in consequatur dignissimos sequi. Esse sit placeat molestias velit! Officia ea necessitatibus aperiam sapiente.
+
     </div>
 
 @endsection

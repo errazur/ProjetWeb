@@ -14,7 +14,6 @@ class crea_club_joueurController extends Controller
 
     public function indexAction()
     {
-
         return view('Crea-club');
     }
 
@@ -49,7 +48,7 @@ class crea_club_joueurController extends Controller
         //Création du mileu droit
         $MD = \App\Models\Joueur::factory(1)->postes('MD')->create(['club_id' => $club->id]);
 
-        //création du mileu central 1
+        //création du mileu central
         $MC1 = \App\Models\Joueur::factory(3)->postes('MC')->create(['club_id' => $club->id]);
 
         //Création du Buteur

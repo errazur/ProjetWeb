@@ -33,12 +33,12 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        $ClubUser = Club::where('id', Auth::id())->first();
+        $clubUser = Club::where('id', Auth::id())->first();
 
-        if($ClubUser == null){
+        if($clubUser == null){
             return redirect('/creation');
         }   else {
-            return redirect('/Acuueil');
+            return redirect('/Accueil');
         };
 
 

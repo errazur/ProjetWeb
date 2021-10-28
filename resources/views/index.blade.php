@@ -75,12 +75,12 @@
                     <div class="flex-shrink-0 flex items-center mb-6">
                         @auth
 
-                        @if($ClubUser == null)
+                        @if($clubuser == null)
                         <a href="{{ route('Creation') }}" class="text-sm text-black bg-bleu-pastel shadow p-5">
                             JOUER
                         </a>
                         @endif
-                        @if($ClubUser != null)
+                        @if($clubuser != null)
                         <a href="{{ route('Accueil') }}" class="text-sm text-black bg-bleu-pastel shadow p-5">
                             JOUER
                         </a>
