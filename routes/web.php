@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JeuneController;
 use App\Http\Controllers\LigueController;
+use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\EffectifController;
@@ -31,8 +32,8 @@ use App\Http\Controllers\crea_club_joueurController;
 
 
 Route::get('/', function () {
-    $clubUser = Auth::user()->clubUser;
-    return view('index', compact('clubUser'));
+    $clubuser = Club::where('user_id', Auth::id())->first();
+    return view('index', compact('clubuser'));
 })->name('Home');
 
 
@@ -71,6 +72,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/Finance', [FinanceController::class, 'financeAction'])->name('finance');
 
             Route::get('/Jeune', [JeuneController::class, 'jeuneAction'])->name('jeune');
+
+            Route::get('/joueur/{joueur}', [JoueurController::class, 'joueurAction'])->name('joueur');
         });
 
     });

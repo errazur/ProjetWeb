@@ -7,21 +7,18 @@
 
     <div class="m-4">
 
-        <div class="flex justify-center">
+        <x-label>
             Liste de l'effectif du club :
-        </div>
+        </x-label>
 
-        <div class="m-4 container">
+        <div class="m-4 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
             <ul>
                 @foreach($clubuser->joueurs as $joueurs)
-                    <li>
+                    <li class="mt-3">
                         <div class="flex flex-row place-items-stretch justify-around">
-                            <div>
-                                {{$joueurs->nom}}
-                            </div>
-                            <div>
-                                {{$joueurs->prenom}}
-                            </div>
+
+                            <a class="hover:underline" href="{{route('joueur', $joueurs)}}">{{$joueurs->nom}}   {{$joueurs->prenom}}</a>
+
                             <div>
                                 {{$joueurs->age}}
                             </div>
