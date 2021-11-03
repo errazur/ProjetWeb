@@ -12,12 +12,15 @@
         </x-label>
 
         <div class="m-4 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
-            <ul>
+            <ul class="py-2">
                 @foreach($clubuser->joueurs as $joueurs)
-                    <li class="mt-3">
-                        <div class="flex flex-row place-items-stretch justify-around">
+                    <li class="bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 m-3">
+                        <a class="flex flex-row place-items-stretch justify-around hover:shadow-md" href="{{route('joueur', $joueurs)}}">
 
-                            <a class="hover:underline" href="{{route('joueur', $joueurs)}}">{{$joueurs->nom}}   {{$joueurs->prenom}}</a>
+                            <div>
+                               {{$joueurs->nom}}   {{$joueurs->prenom}}
+                            </div>
+
 
                             <div>
                                 {{$joueurs->age}}
@@ -31,7 +34,7 @@
                             <div>
                                 {{$joueurs->energie}}
                             </div>
-                        </div>
+                        </a>
                     </li>
                 @endforeach
             </ul>

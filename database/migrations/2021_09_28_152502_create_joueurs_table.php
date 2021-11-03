@@ -19,8 +19,8 @@ class CreateJoueursTable extends Migration
             $table->String('prenom');
             $table->bigInteger('age');
             $table->String('poste',4);
-            $table->bigInteger('plongeon')->nullable();
-            $table->bigInteger('reflexe')->nullable();
+            $table->bigInteger('plongeon');
+            $table->bigInteger('reflexe');
             $table->bigInteger('vitesse');
             $table->bigInteger('dribble');
             $table->bigInteger('tir');
