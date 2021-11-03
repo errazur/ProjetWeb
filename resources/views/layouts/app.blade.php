@@ -25,7 +25,7 @@
         <div class="flex flex-1">
 
             <!-- Side Bar -->
-            <aside class="flex flex-col bg-violet-pastel m-4 py-1 px-2 box-border justify-around w-28">
+            <aside class="flex flex-col bg-violet-pastel m-4 py-1 px-2 box-border justify-around w-28 rounded-md">
 
                     {{-- Home : --}}
                     <x-responsive-nav-link href="{{ route('Accueil')}}" :active="request()->routeIs('Accueil')"><img src=" {{ URL::asset('/images/home.svg') }}" alt="Home"
@@ -69,7 +69,7 @@
 
             </aside>
             <!-- Page Content -->
-            <div class="flex flex-1 flex-col bg-violet-pastel py-6 px-4 sm:px-6 lg:px-8 m-4">
+            <div class="flex flex-1 flex-col bg-violet-pastel py-6 px-4 sm:px-6 lg:px-8 m-4 rounded-md">
                 @yield('content')
             </div>
         </div>

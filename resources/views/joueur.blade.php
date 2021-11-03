@@ -2,64 +2,112 @@
 
 @section('content')
 
-<div class="m-4 flex flex-1 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5 flex-col">
+    <div class="m-4 flex flex-1 bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 flex-col">
 
-    <div class="m-4">
-        <div class=" block font-medium text-gray-700 text-3xl">
-           {{$joueur->nom}}    {{$joueur->prenom}}
+        <div class=" bg-gray-900 shadow-lg rounded-md py-2">
+            <div class="m-4">
+                <div class=" block font-medium text-gray-400 text-3xl pl-10 mb-4">
+                    {{ $joueur->nom }} {{ $joueur->prenom }}
+                </div>
+
+                <div class="flex flex-row justify-around">
+                    <div class=" block font-medium text-gray-600 text-2xl">
+                        Âge : {{ $joueur->age }} ans
+                    </div>
+
+                    <div class=" block font-medium text-gray-600 text-2xl">
+                        Poste : {{ $joueur->poste }}
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class=" block font-medium text-gray-600 text-2xl">
+                        Nom de l'equipe : {{ $clubuser->nom }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+            <div class="m-4 block font-medium text-gray-700 text-2xl">
+                Statistique de Gardien :
+            </div>
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Plongeon : {{ $joueur->plongeon }}
+                </div>
+            </div>
+
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Réflexe : {{ $joueur->reflexe }}
+                </div>
+            </div>
+        </div>
+
+        <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+            <div class="m-4 block font-medium text-gray-700 text-2xl">
+                Statistique d'attaque :
+            </div>
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Vitesse : {{ $joueur->vitesse }}
+                </div>
+            </div>
+
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Dribble : {{ $joueur->dribble }}
+                </div>
+            </div>
+
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Tir : {{ $joueur->tir }}
+                </div>
+            </div>
+        </div>
+
+        <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+            <div class="m-4 block font-medium text-gray-700 text-2xl">
+                Statistique de vista :
+            </div>
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Passe : {{ $joueur->passe }}
+                </div>
+            </div>
+        </div>
+
+        <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+            <div class="m-4 block font-medium text-gray-700 text-2xl">
+                Statistique physique :
+            </div>
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Défense : {{ $joueur->defense }}
+                </div>
+            </div>
+
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Force : {{ $joueur->physique }}
+                </div>
+            </div>
+
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Forme : {{ $joueur->forme }}
+                </div>
+            </div>
+
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    Energie : {{ $joueur->energie }}
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="m-4">
-        <div class=" block font-medium text-gray-700 text-2xl">
-            {{$joueur->age}} ans
-        </div>
-    </div>
-
-    <div class="m-4">
-        <div class=" block font-medium text-gray-700 text-2xl">
-            Poste : {{$joueur->poste}}
-        </div>
-    </div>
-
-
-    <x-label>
-        {{$joueur->plongeon}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->vitesse}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->dribble}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->tir}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->passe}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->defense}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->physique}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->forme}}
-    </x-label>
-
-    <x-label>
-        {{$joueur->energie}}
-    </x-label>
-
-</div>
 
 
 

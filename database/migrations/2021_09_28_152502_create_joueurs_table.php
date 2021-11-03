@@ -20,12 +20,13 @@ class CreateJoueursTable extends Migration
             $table->bigInteger('age');
             $table->String('poste',4);
             $table->bigInteger('plongeon')->nullable();
+            $table->bigInteger('reflexe')->nullable();
             $table->bigInteger('vitesse');
             $table->bigInteger('dribble');
             $table->bigInteger('tir');
             $table->bigInteger('passe');
             $table->bigInteger('defense');
-            $table->bigInteger('physique');
+            $table->bigInteger('force');
             $table->bigInteger('forme');
             $table->bigInteger('energie');
             $table->foreignId('club_id')->constrained();
