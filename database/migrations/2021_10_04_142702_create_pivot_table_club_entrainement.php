@@ -17,6 +17,7 @@ class CreatePivotTableClubEntrainement extends Migration
             $table->id();
             $table->foreignId('joueur_id')->constrained();
             $table->foreignId('entrainement_id')->constrained();
+            $table->timestamps();
         });
     }
 

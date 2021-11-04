@@ -17,6 +17,7 @@ class CreateEntrainementsTable extends Migration
             $table->id();
             $table->String('Style');
             $table->time('durée');
+            $table->timestamps();
         });
     }
 

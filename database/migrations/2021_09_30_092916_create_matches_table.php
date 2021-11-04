@@ -18,6 +18,7 @@ class CreateMatchesTable extends Migration
             $table->foreignId('club_id_1')->constrained();
             $table->foreignId('club_id_2')->constrained();
             $table->dateTime('jour_du_match');
+            $table->timestamps();
         });
     }
 

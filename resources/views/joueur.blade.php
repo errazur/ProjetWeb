@@ -6,7 +6,7 @@
 
         <div class=" bg-gray-900 shadow-lg rounded-md py-2">
             <div class="m-4">
-                <div class=" block font-medium text-gray-400 text-3xl pl-10 mb-4">
+                <div class="block font-medium text-gray-400 text-3xl pl-10 mb-4">
                     {{ $joueur->nom }} {{ $joueur->prenom }}
                 </div>
 

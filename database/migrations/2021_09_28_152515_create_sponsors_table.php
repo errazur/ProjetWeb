@@ -18,6 +18,7 @@ class CreateSponsorsTable extends Migration
             $table->String('nom');
             $table->bigInteger('cash');
             $table->bigInteger('bonus')->nullable();
+            $table->timestamps();
         });
     }
 
