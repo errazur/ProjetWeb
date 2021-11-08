@@ -18,6 +18,7 @@ class CreateCentreEntrainementsTable extends Migration
             $table->bigInteger('niveau');
             $table->bigInteger('bonus_forme');
             $table->bigInteger('endurance_gagne');
+            $table->bigInteger('prix_amelioriation')->nullable();
             $table->timestamps();
         });
     }

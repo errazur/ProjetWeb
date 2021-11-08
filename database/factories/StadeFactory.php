@@ -34,6 +34,7 @@ class StadeFactory extends Factory
                     'niveau' => 1,
                     'place_dispo' => 10000,
                     'prix_place' => 15,
+                    'prix_amelioriation' => 30,
                 ];
             });
         };
@@ -44,6 +45,7 @@ class StadeFactory extends Factory
                     'niveau' => 2,
                     'place_dispo' => 15000,
                     'prix_place' => 15,
+                    'prix_amelioriation' => 60,
                 ];
             });
         };
@@ -54,6 +56,7 @@ class StadeFactory extends Factory
                     'niveau' => 3,
                     'place_dispo' => 20000,
                     'prix_place' => 15,
+                    'prix_amelioriation' => 90,
                 ];
             });
         };

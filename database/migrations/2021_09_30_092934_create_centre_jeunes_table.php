@@ -17,6 +17,7 @@ class CreateCentreJeunesTable extends Migration
             $table->id();
             $table->bigInteger('niveau');
             $table->bigInteger('place_dispo');
+            $table->bigInteger('prix_amelioriation')->nullable();
             $table->timestamps();
         });
     }

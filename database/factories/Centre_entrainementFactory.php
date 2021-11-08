@@ -34,6 +34,7 @@ class Centre_entrainementFactory extends Factory
                     'niveau' => 1,
                     'bonus_forme' => 3,
                     'endurance_gagne' => 5,
+                    'prix_amelioriation' => 40,
                 ];
             });
         };
@@ -44,6 +45,7 @@ class Centre_entrainementFactory extends Factory
                     'niveau' => 2,
                     'bonus_forme' => 5,
                     'endurance_gagne' => 7,
+                    'prix_amelioriation' => 80,
                 ];
             });
         };
@@ -54,6 +56,7 @@ class Centre_entrainementFactory extends Factory
                     'niveau' => 3,
                     'bonus_forme' => 7,
                     'endurance_gagne' => 9,
+                    'prix_amelioriation' => 110,
                 ];
             });
         };

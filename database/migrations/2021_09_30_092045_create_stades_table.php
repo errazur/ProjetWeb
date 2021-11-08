@@ -18,6 +18,7 @@ class CreateStadesTable extends Migration
             $table->bigInteger('niveau');
             $table->bigInteger('place_dispo');
             $table->bigInteger('prix_place');
+            $table->bigInteger('prix_amelioriation')->nullable();
             $table->timestamps();
         });
     }

@@ -33,6 +33,7 @@ class Centre_jeuneFactory extends Factory
                 return [
                     'niveau' => 0,
                     'place_dispo' => 0,
+                    'prix_amelioriation' => 30,
                 ];
             });
         };
@@ -42,6 +43,7 @@ class Centre_jeuneFactory extends Factory
                 return [
                     'niveau' => 1,
                     'place_dispo' => 1,
+                    'prix_amelioriation' => 50,
                 ];
             });
         };
@@ -51,6 +53,7 @@ class Centre_jeuneFactory extends Factory
                 return [
                     'niveau' => 2,
                     'place_dispo' => 2,
+                    'prix_amelioriation' => 70,
                 ];
             });
         };
@@ -60,6 +63,7 @@ class Centre_jeuneFactory extends Factory
                 return [
                     'niveau' => 3,
                     'place_dispo' => 3,
+                    'prix_amelioriation' => 100,
                 ];
             });
         };
@@ -69,6 +73,7 @@ class Centre_jeuneFactory extends Factory
                 return [
                     'niveau' => 4,
                     'place_dispo' => 4,
+                    'prix_amelioriation' => 120,
                 ];
             });
         };
