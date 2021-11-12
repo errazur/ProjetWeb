@@ -8,6 +8,8 @@
         </div>
     </div>
 
+    <livewire:flash />
+
     <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
         <div class="bg-gray-400 rounded-md ring-1 ring-black ring-opacity-5 py-1 mb-4">
             <div class="m-2 block font-medium text-gray-800 text-2xl">
@@ -29,7 +31,7 @@
         <div class="block font-medium text-gray-700 text-2xl m-2">
             Prix de l'amélioration du bâtiment : <span class="font-medium text-violet text-2xl">{{$stade->prix_amelioriation}}M</span>
         </div>
-        <button class="inline-flex ml-96 mb-4 mt-2 items-center px-4 py-2 bg-bleu-pastel border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" wire:click="tryup">
+        <button class="inline-flex ml-96 mb-4 mt-2 items-center px-4 py-2 bg-bleu-pastel border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" wire:click="upgraderStade">
             start
         </button>
     </div>
