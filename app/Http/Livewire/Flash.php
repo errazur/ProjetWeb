@@ -17,14 +17,14 @@ class Flash extends Component
     ];
 
 
-    public $listener = ['flash' => 'setFlashMessage'];
+    public $listeners = ['flash' => 'setFlashMessage'];
 
     public function setFlashMessage($message, $type)
     {
         $this->message = $message;
         $this->type = $type;
 
-        $this->dispatchBrowserEvent('flash_message');
+        $this->dispatchBrowserEvent('flash-message');
     }
 
     public function render()

@@ -17,7 +17,25 @@ class Parc extends Component
         if($this->clubuser->Argent >= $this->stade->prix_amelioriation){
             dd($this->clubuser);
         }   else {
-            $this->emit('flash', 'tu n\'a pas l\'argent ncessaire pour faire cette amélioration', 'error');
+                $this->emit('flash', 'tu n\'a pas l\'argent ncessaire pour faire l\'amélioration du stade', 'error');
+        }
+    }
+
+    public function upgraderEntrainement(){
+
+        if($this->clubuser->Argent >= $this->centre_entrainement->prix_amelioriation){
+            dd($this->clubuser);
+        }   else{
+                $this->emit('flash', 'tu n\'a pas l\'argent ncessaire pour faire l\'amélioration du centre d\'entrainement', 'error');
+        }
+    }
+
+    public function upgraderJeune(){
+
+        if($this->clubuser->Argent >= $this->centre_jeune->prix_amelioriation){
+            dd($this->clubuser);
+        }   else{
+                $this->emit('flash', 'tu n\'a pas l\'argent ncessaire pour faire l\'amélioration du centre de jeune', 'error');
         }
     }
 
