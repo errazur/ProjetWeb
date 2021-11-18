@@ -24,7 +24,7 @@
 
 <body class="font-sans antialiased bg-violet">
     <div class="flex flex-col min-h-screen">
-        @include('livewire.navigation')
+        @include('layouts.navigation')
 
         <div class="flex flex-1">
 

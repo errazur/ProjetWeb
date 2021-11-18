@@ -14,6 +14,29 @@ class Parc extends Component
     public $centre_entrainement;
     public $centre_jeune;
 
+    public function constructTime(){
+
+        $clubuser = $this->clubuser;
+        $stadeLevel = $clubuser->stade_id;
+        $nowDate = new \DateTime;
+
+
+        if($stadeLevel == '1'){
+
+
+        }   elseif($stadeLevel == '2'){
+
+
+        }   elseif($stadeLevel == '3'){
+
+
+        }   elseif($stadeLevel == '4'){
+
+
+        }
+
+    }
+
     public function upgraderStade(){
         $clubuser = $this->clubuser;
         $argentClub = $clubuser->Argent;

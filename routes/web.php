@@ -3,6 +3,7 @@
 use App\Models\Club;
 use App\Models\User;
 use App\Models\Joueur;
+use App\Http\Livewire\Training;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JeuneController;
@@ -64,6 +65,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/Tactique', [TactiqueController::class, 'tactiqueAction'])->name('tactique');
 
             Route::get('/Entrainement', [EntrainementController::class, 'entrainementAction'])->name('entrainement');
+
+            Route::post('/Entrainement', [Training::class, 'entrainementLaunch']);
 
             Route::get('/Structure', [StructureController::class, 'structureAction'])->name('structure');
 
