@@ -15,7 +15,7 @@ class StructureController extends Controller
         $stade = Stade::where('id', $clubuser->stade_id)->first();
         $centre_entrainement = Centre_entrainement::where('id', $clubuser->centre_entrainement_id)->first();
         $centre_jeune = Centre_jeune::where('id', $clubuser->centre_jeune_id)->first();
-        return view('structure',compact('clubuser','stade','centre_entrainement','centre_jeune'));
 
+        return view('structure',compact('clubuser','stade','centre_entrainement','centre_jeune'));
      }
 }

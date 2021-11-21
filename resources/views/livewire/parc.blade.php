@@ -6,6 +6,14 @@
                 {{$clubuser->nom}}'s parc
             </div>
         </div>
+
+        <div class="m-4">
+            <div class="block font-medium text-gray-400 text-1xl pl-10 mb-4">
+                @if ($clubuser->constructionOn == '1')
+                    <span>Vous avez une construction en cours qui dans : <livewire:construction-count :clubuser="$clubuser"/> </span>
+                @endif
+            </div>
+        </div>
     </div>
 
     <livewire:flash />
