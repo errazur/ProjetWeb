@@ -4,12 +4,10 @@ namespace App\Http\Livewire;
 
 use App\Models\Joueur;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Tactique extends Component
 {
-
-    public $clubuser;
-    public $joueurs;
 
     public function updateJoueurOrder($items)
     {
@@ -25,6 +23,8 @@ class Tactique extends Component
 
     public function render()
     {
-        return view('livewire.tactique');
+        $clubuser = Auth::user()->clubUser;
+        $joueurs = Joueur::where('club_id', $clubuser->id)->orderBy('order_position', 'asc')->get();
+        return view('livewire.tactique', compact('clubuser','joueurs'));
     }
 }
