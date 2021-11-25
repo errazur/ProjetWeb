@@ -13,7 +13,7 @@ class ConstructionCount extends Component
     public $clubuser;
     public $dateDiff;
 
-    public function countDate()
+    public function countDateConstruct()
     {
 
         $clubuser = $this->clubuser;

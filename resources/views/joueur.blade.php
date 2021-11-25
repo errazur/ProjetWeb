@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="m-4 flex flex-1 bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 flex-col">
+    <div class=" flex flex-1 bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 flex-col">
 
         <div class=" bg-gray-900 shadow-lg rounded-md py-2">
             <div class="m-4">

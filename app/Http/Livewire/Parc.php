@@ -30,7 +30,7 @@ class Parc extends Component
 
                 if ($stadeLevel == '1') {
 
-                    $finishDate = $nowDate->add(new \DateInterval('PT1M'));
+                    $finishDate = $nowDate->add(new \DateInterval('P1M'));
                     Club::where('id', Auth::id())
                         ->update([
                             'constructionOn' => '1',
@@ -40,7 +40,7 @@ class Parc extends Component
                         ]);
                 } elseif ($stadeLevel == '2') {
 
-                    $finishDate = $nowDate->add(new \DateInterval('PT1M'));
+                    $finishDate = $nowDate->add(new \DateInterval('P3M'));
                     Club::where('id', Auth::id())
                         ->update([
                             'constructionOn' => '1',

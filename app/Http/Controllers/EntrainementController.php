@@ -13,7 +13,8 @@ class EntrainementController extends Controller
     public function entrainementAction()
     {
         $clubuser = Auth::user()->clubUser;
-        return view('entrainement', compact('clubuser'));
+        $joueurs = $clubuser->joueurs;
+        return view('entrainement', compact('clubuser', 'joueurs'));
     }
 
 

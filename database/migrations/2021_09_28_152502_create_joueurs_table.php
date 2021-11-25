@@ -30,6 +30,7 @@ class CreateJoueursTable extends Migration
             $table->bigInteger('forme');
             $table->bigInteger('energie');
             $table->foreignId('club_id')->constrained();
+            $table->bigInteger('order_position')->default(0);
             $table->timestamps();
         });
     }

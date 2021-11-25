@@ -29,7 +29,6 @@ class JoueurFactory extends Factory
             'forme' => 10,
             'energie' => 100,
 
-
         ];
     }
 

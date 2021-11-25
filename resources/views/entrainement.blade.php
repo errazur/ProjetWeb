@@ -2,6 +2,6 @@
 
 @section('content')
 
-<livewire:training :clubuser="$clubuser" />
+<livewire:training :clubuser="$clubuser" :joueurs="$joueurs" />
 
 @endsection

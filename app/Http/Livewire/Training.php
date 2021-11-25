@@ -12,6 +12,7 @@ class Training extends Component
 
     public $clubuser;
     public $centre_entrainement;
+    public $joueurs;
 
 
     public function render()
@@ -36,10 +37,9 @@ class Training extends Component
         }
 
         $joueurs = Joueur::findMany($data['joueur']);
+        $trainingType = $data['trainingType'];
 
         foreach ($joueurs as $joueur) {
-
-            $trainingType = $data['trainingType'];
 
             $endurance_joueur = $joueur->energie;
             $forme_joueur = $joueur->forme;

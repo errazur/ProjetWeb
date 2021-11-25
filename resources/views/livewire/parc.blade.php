@@ -1,4 +1,4 @@
-<div class="flex flex-1 flex-col m-4 bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+<div class="flex flex-1 flex-col bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
 
     <div class=" bg-gray-900 shadow-lg rounded-md py-2">
         <div class="m-4">

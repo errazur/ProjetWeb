@@ -1,4 +1,4 @@
-<div class="flex flex-1 flex-col m-4 bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 pb-4">
+<div class="flex flex-1 flex-col bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 pb-4">
 
     <div class=" bg-gray-900 shadow-lg rounded-md py-2">
         <div class="m-4">
@@ -60,30 +60,30 @@
 
             <div class="m-4 bg-gray-300 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
                 <ul class="py-2">
-                    @foreach ($clubuser->joueurs as $joueurs)
+                    @foreach ($joueurs as $joueur)
                         <li
-                            class="bg-gray-200 flex flex-row place-items-stretch justify-around shadow-lg rounded-md ring-1 ring-black ring-opacity-5 m-3">
-                            <a class="hover:underline" href="{{ route('joueur', $joueurs) }}">
+                            class="bg-gray-200 flex flex-row justify-around shadow-lg rounded-md ring-1 ring-black ring-opacity-5 m-3">
+                            <a class="hover:underline" href="{{ route('joueur', $joueur) }}">
 
                                 <div>
-                                    {{ $joueurs->nom }} {{ $joueurs->prenom }}
+                                    {{ $joueur->nom }} {{ $joueur->prenom }}
                                 </div>
 
                             </a>
                             <div>
-                                {{ $joueurs->age }}
+                                {{ $joueur->age }}
                             </div>
                             <div>
-                                {{ $joueurs->poste }}
+                                {{ $joueur->poste }}
                             </div>
                             <div>
-                                {{ $joueurs->forme }}
+                                {{ $joueur->forme }}
                             </div>
                             <div>
-                                {{ $joueurs->energie }}
+                                {{ $joueur->energie }}
                             </div>
 
-                            <input type="checkbox" name="joueur[]" value="{{ $joueurs->id }}" class="mt-2">
+                            <input type="checkbox" name="joueur[]" value="{{ $joueur->id }}" class="mt-2">
                         </li>
                     @endforeach
                 </ul>

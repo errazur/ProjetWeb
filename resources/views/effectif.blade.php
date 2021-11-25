@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="m-4">
+    <div class="">
 
         <div class="bg-gray-900 shadow-lg rounded-md py-2">
             <div class="block font-medium text-gray-400 text-3xl pl-10 m-4">
@@ -14,25 +14,25 @@
 
         <div class="m-4 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
             <ul class="py-2">
-                @foreach ($clubuser->joueurs as $joueurs)
+                @foreach ($clubuser->joueurs as $joueur)
                     <li class="bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5 m-3">
                         <a class="flex flex-row place-items-stretch justify-around hover:shadow-md"
-                            href="{{ route('joueur', $joueurs) }}">
+                            href="{{ route('joueur', $joueur) }}">
 
                             <div>
-                                {{ $joueurs->nom }} {{ $joueurs->prenom }}
+                                {{ $joueur->nom }} {{ $joueur->prenom }}
                             </div>
                             <div>
-                                {{ $joueurs->age }}
+                                {{ $joueur->age }}
                             </div>
                             <div>
-                                {{ $joueurs->poste }}
+                                {{ $joueur->poste }}
                             </div>
                             <div>
-                                {{ $joueurs->forme }}
+                                {{ $joueur->forme }}
                             </div>
                             <div>
-                                {{ $joueurs->energie }}
+                                {{ $joueur->energie }}
                             </div>
                         </a>
                     </li>
