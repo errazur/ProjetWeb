@@ -1,6 +1,30 @@
 <div class="flex flex-1 flex-row bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
 
-    <div class="flex flex-1">
+    <div class="flex flex-1 flex-col shadow-lg rounded-md m-2">
+
+        <div class="flex flex-1 bg-center bg-terrain w-full bg-contain bg-no-repeat">
+            <div class="grid grid-cols-4 gap-4 w-full">
+
+                <div class="z-1">1</div>
+                <div class="z-1">2</div>
+                <div class="z-1">3</div>
+                <div class="z-1">4</div>
+                <div class="z-1">5</div>
+                <div class="z-1">6</div>
+                <div class="z-1">7</div>
+                <div class="z-1">8</div>
+                <div class="z-1">9</div>
+                <div class="z-1">10</div>
+                <div class="z-1">11</div>
+
+
+            </div>
+
+        </div>
+
+        <div class="flex flex-1">
+
+        </div>
 
     </div>
 
@@ -13,6 +37,7 @@
                 <table class="table table-auto border-separate border m-2 text-gray-400">
                     <thead>
                         <tr class="">
+                            <th scope="col">!</th>
                             <th scope="col">#</th>
                             <th scope="col">Nom du joueurs</th>
                             <th scope="col">Poste</th>
@@ -25,6 +50,7 @@
                             <tr wire:sortable.item="{{ $joueur->id }}" wire:key="joueur-{{ $joueur->id }}"
                                 wire:sortable.handle style="width: 10px; cursor: move;" class="hover:shadow-md">
 
+                                <th scope="row">{{$poste[$loop->iteration]}}</th>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td><a class="hover:underline" href="{{ route('joueur', $joueur) }}">
                                         {{ $joueur->nom }} {{ $joueur->prenom }}

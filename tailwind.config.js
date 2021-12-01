@@ -16,6 +16,10 @@ module.exports = {
                 'bleu-pastel': '#cdedfa'
             },
 
+            backgroundImage: {
+                'terrain': "url('/images/terrain.png')",
+               }
+
         },
     },
     variants: {
@@ -23,5 +27,5 @@ module.exports = {
 
         },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/forms'),],
 }

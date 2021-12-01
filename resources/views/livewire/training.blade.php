@@ -83,7 +83,7 @@
                                 {{ $joueur->energie }}
                             </div>
 
-                            <input type="checkbox" name="joueur[]" value="{{ $joueur->id }}" class="mt-2">
+                            <input type="checkbox" name="joueur[]" value="{{ $joueur->id }}" class="mt-1 form-checkbox checked:bg-blue-600 checked:border-transparent cursor-pointer">
                         </li>
                     @endforeach
                 </ul>

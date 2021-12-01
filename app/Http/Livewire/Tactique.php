@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 class Tactique extends Component
 {
 
+    public $poste = ['','GC', 'DG','DC','DC', 'DD','MG','MC','MC', 'MD', 'BU','BU', 'REM1','REM2','REM3','REM4'];
+
     public function updateJoueurOrder($items)
     {
 
