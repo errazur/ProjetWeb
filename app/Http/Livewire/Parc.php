@@ -3,28 +3,25 @@
 namespace App\Http\Livewire;
 
 use App\Models\Club;
+use App\Models\Stade;
 use Livewire\Component;
+use App\Models\Centre_jeune;
+use App\Models\Centre_entrainement;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
 
 class Parc extends Component
 {
 
-    public $clubuser;
-    public $stade;
-    public $centre_entrainement;
-    public $centre_jeune;
-    public $diffDate;
-
     public function upgraderStade()
     {
-        $clubuser = $this->clubuser;
+        $clubuser = Auth::user()->clubUser;
+        $stade = Stade::where('id', $clubuser->stade_id)->first();
         $argentClub = $clubuser->Argent;
         $stadeLevel = $clubuser->stade_id;
 
         if ($clubuser->constructionOn == '0') {
 
-            if ($clubuser->Argent >= $this->stade->prix_amelioriation) {
+            if ($clubuser->Argent >= $stade->prix_amelioriation) {
 
                 $nowDate = new \DateTime;
 
@@ -36,7 +33,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'stade',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->stade->prix_amelioriation,
+                            'Argent' => $argentClub - $stade->prix_amelioriation,
                         ]);
                 } elseif ($stadeLevel == '2') {
 
@@ -46,7 +43,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'stade',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->stade->prix_amelioriation,
+                            'Argent' => $argentClub - $stade->prix_amelioriation,
                         ]);
                 } elseif ($stadeLevel == '3') {
 
@@ -56,7 +53,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'stade',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->stade->prix_amelioriation,
+                            'Argent' => $argentClub - $stade->prix_amelioriation,
                         ]);
                 } elseif ($stadeLevel == '4') {
 
@@ -66,7 +63,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'stade',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->stade->prix_amelioriation,
+                            'Argent' => $argentClub - $stade->prix_amelioriation,
                         ]);
                 }
 
@@ -81,13 +78,14 @@ class Parc extends Component
 
     public function upgraderEntrainement()
     {
-        $clubuser = $this->clubuser;
+        $clubuser = Auth::user()->clubUser;
+        $centre_entrainement = Centre_entrainement::where('id', $clubuser->centre_entrainement_id)->first();
         $argentClub = $clubuser->Argent;
         $entrainementLevel = $clubuser->centre_entrainement_id;
 
         if ($clubuser->constructionOn == '0') {
 
-            if ($clubuser->Argent >= $this->centre_entrainement->prix_amelioriation) {
+            if ($clubuser->Argent >= $centre_entrainement->prix_amelioriation) {
 
                 $nowDate = new \DateTime;
 
@@ -99,7 +97,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_entrainement',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_entrainement->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_entrainement->prix_amelioriation,
                         ]);
                 } elseif ($entrainementLevel == '2') {
 
@@ -109,7 +107,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_entrainement',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_entrainement->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_entrainement->prix_amelioriation,
                         ]);
                 } elseif ($entrainementLevel == '3') {
 
@@ -119,7 +117,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_entrainement',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_entrainement->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_entrainement->prix_amelioriation,
                         ]);
                 } elseif ($entrainementLevel == '4') {
 
@@ -129,7 +127,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_entrainement',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_entrainement->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_entrainement->prix_amelioriation,
                         ]);
                 }
 
@@ -144,13 +142,14 @@ class Parc extends Component
 
     public function upgraderJeune()
     {
-        $clubuser = $this->clubuser;
+        $clubuser = Auth::user()->clubUser;
+        $centre_jeune = Centre_jeune::where('id', $clubuser->centre_jeune_id)->first();
         $argentClub = $clubuser->Argent;
         $centrejeuneLevel = $clubuser->centre_jeune_id;
 
         if ($clubuser->constructionOn == '0') {
 
-            if ($clubuser->Argent >= $this->centre_jeune->prix_amelioriation) {
+            if ($clubuser->Argent >= $centre_jeune->prix_amelioriation) {
 
                 $nowDate = new \DateTime;
 
@@ -162,7 +161,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_jeune',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_jeune->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_jeune->prix_amelioriation,
                         ]);
                 } elseif ($centrejeuneLevel == '2') {
 
@@ -172,7 +171,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_jeune',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_jeune->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_jeune->prix_amelioriation,
                         ]);
                 } elseif ($centrejeuneLevel == '3') {
 
@@ -182,7 +181,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_jeune',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_jeune->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_jeune->prix_amelioriation,
                         ]);
                 } elseif ($centrejeuneLevel == '4') {
 
@@ -192,7 +191,7 @@ class Parc extends Component
                             'constructionOn' => '1',
                             'constructionName' => 'centre_jeune',
                             'constructionDate' => $finishDate,
-                            'Argent' => $argentClub - $this->centre_jeune->prix_amelioriation,
+                            'Argent' => $argentClub - $centre_jeune->prix_amelioriation,
                         ]);
                 }
 
@@ -207,6 +206,11 @@ class Parc extends Component
 
     public function render()
     {
-        return view('livewire.parc');
+        $clubuser = Auth::user()->clubUser;
+        $stade = Stade::where('id', $clubuser->stade_id)->first();
+        $centre_entrainement = Centre_entrainement::where('id', $clubuser->centre_entrainement_id)->first();
+        $centre_jeune = Centre_jeune::where('id', $clubuser->centre_jeune_id)->first();
+
+        return view('livewire.parc', compact('clubuser','stade','centre_entrainement','centre_jeune'));
     }
 }

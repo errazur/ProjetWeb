@@ -5,6 +5,7 @@
         <div class="flex flex-1 bg-center bg-terrain w-full bg-contain bg-no-repeat">
             <div class="grid grid-cols-6 gap-4 w-full m-3">
 
+                @if($joueur11 != null)
                 <div class="z-1 col-span-3">
                     <div class="flex justify-end">
                         <div class="flex flex-col items-center">
@@ -104,12 +105,17 @@
 
                     </div>
                 </div>
-
+                @endif
             </div>
 
         </div>
 
         <div class="flex flex-1 bg-gray-900 rounded-md m-2">
+            <div class="container">
+                <div class="font-medium text-gray-200 text-2xl m-4">
+                    La tactique de votre club : <span class="text-white">{{ $clubuser->tactique }}</span>
+                </div>
+            </div>
 
         </div>
 
