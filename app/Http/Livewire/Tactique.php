@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Club;
 use App\Models\Joueur;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
@@ -9,7 +10,10 @@ use Illuminate\Support\Facades\Auth;
 class Tactique extends Component
 {
 
-    public $poste = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'BU','BU', 'REM1','REM2','REM3','REM4'];
+    public $poste1 = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'BU','BU', 'REM1','REM2','REM3','REM4'];
+    public $poste2 = ['','GC', 'DD','DC','DC', 'DG','MC','MC','MC', 'AG', 'AD','BU', 'REM1','REM2','REM3','REM4'];
+    public $poste3 = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'MOC','BU', 'REM1','REM2','REM3','REM4'];
+
 
     public function updateJoueurOrder($items)
     {
@@ -21,6 +25,49 @@ class Tactique extends Component
                     'order_position' => $item['order']
                 ]);
         }
+    }
+
+    public function dispositif1(){
+        Club::where('id', Auth::id())
+        ->update([
+            'dispositif' => '4-4-2',
+        ]);
+    }
+
+    public function dispositif2(){
+        Club::where('id', Auth::id())
+        ->update([
+            'dispositif' => '4-3-3',
+        ]);
+    }
+
+    public function dispositif3(){
+        Club::where('id', Auth::id())
+        ->update([
+            'dispositif' => '4-5-1',
+        ]);
+    }
+
+    public function offensif(){
+
+        Club::where('id', Auth::id())
+        ->update([
+            'tactique' => 'offensif',
+        ]);
+    }
+
+    public function defensif(){
+        Club::where('id', Auth::id())
+        ->update([
+            'tactique' => 'défensif',
+        ]);
+    }
+
+    public function equilibre(){
+        Club::where('id', Auth::id())
+        ->update([
+            'tactique' => 'equilibré',
+        ]);
     }
 
     public function render()

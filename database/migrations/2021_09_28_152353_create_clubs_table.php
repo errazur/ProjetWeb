@@ -23,6 +23,7 @@ class CreateClubsTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->enum('Ligue', ['Bronze', 'Argent', 'Or'])->default('Bronze');
             $table->enum('tactique',['défensif','equilibré','offensif'])->default('equilibré');
+            $table->enum('dispositif',['4-4-2','4-3-3','4-5-1'])->default('4-4-2');
             $table->dateTime('constructionDate')->nullable();
             $table->boolean('constructionOn')->default('0');
             $table->string('constructionName',40)->nullable();
