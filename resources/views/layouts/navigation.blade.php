@@ -15,7 +15,7 @@
 
             @auth
 
-                <div class="flex items-center">
+                <div class="invisible hidden md:visible md:flex md:items-center">
                     <livewire:clock />
                 </div>
 
@@ -56,7 +56,7 @@
                                 @csrf
 
                                 <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                        this.closest('form').submit();">
+                                                                this.closest('form').submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
@@ -93,8 +93,53 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden md:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('Accueil')" :active="request()->routeIs('Accueil')">
-                {{ __('Accueil') }}
+            {{-- Home : --}}
+            <x-responsive-nav-link href="{{ route('Accueil') }}" :active="request()->routeIs('Accueil')">
+                Home
+            </x-responsive-nav-link>
+
+            {{-- Notifications : --}}
+            <x-responsive-nav-link href="{{ route('notification') }}" :active="request()->routeIs('notification')">
+                Notifications
+            </x-responsive-nav-link>
+
+            {{-- Ligue : --}}
+            <x-responsive-nav-link href="{{ route('ligue') }}" :active="request()->routeIs('ligue')">
+                Ligue
+            </x-responsive-nav-link>
+
+            {{-- Effectifs : --}}
+            <x-responsive-nav-link href="{{ route('effectif') }}" :active="request()->routeIs('effectif')">
+                Effectifs
+            </x-responsive-nav-link>
+
+            {{-- Tactiques : --}}
+            <x-responsive-nav-link href="{{ route('tactique') }}" :active="request()->routeIs('tactique')">
+                Tactiques
+            </x-responsive-nav-link>
+
+            {{-- Entrainements : --}}
+            <x-responsive-nav-link href="{{ route('entrainement') }}" :active="request()->routeIs('entrainement')">
+                Entrainements
+            </x-responsive-nav-link>
+
+            {{-- Stades : --}}
+            <x-responsive-nav-link href="{{ route('structure') }}" :active="request()->routeIs('structure')">
+                Stades
+            </x-responsive-nav-link>
+
+            {{-- Transfers : --}}
+            <x-responsive-nav-link href="{{ route('transfert') }}" :active="request()->routeIs('transfert')">
+                Transfers
+            </x-responsive-nav-link>
+
+            {{-- Finances : --}}
+            <x-responsive-nav-link href="{{ route('finance') }}" :active="request()->routeIs('finance')">Finances
+            </x-responsive-nav-link>
+
+            {{-- Centre des jeunes : --}}
+            <x-responsive-nav-link href="{{ route('jeune') }}" :active="request()->routeIs('jeune')">Centre des
+                jeunes
             </x-responsive-nav-link>
         </div>
 
@@ -120,7 +165,7 @@
                             @csrf
 
                             <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                        this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-responsive-nav-link>
                         </form>

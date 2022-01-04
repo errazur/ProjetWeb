@@ -37,8 +37,7 @@
                 <nav class="space-y-7">
                     {{-- Home : --}}
                     <x-responsive-nav-link href="{{ route('Accueil') }}" :active="request()->routeIs('Accueil')"><img
-                            src=" {{ URL::asset('/images/home.svg') }}" alt="Home"
-                            class="img-responsive" />
+                            src=" {{ URL::asset('/images/home.svg') }}" alt="Home" class="img-responsive" />
                     </x-responsive-nav-link>
 
                     {{-- Notifications : --}}
@@ -49,8 +48,7 @@
 
                     {{-- Ligue : --}}
                     <x-responsive-nav-link href="{{ route('ligue') }}" :active="request()->routeIs('ligue')"><img
-                            src="{{ URL::asset('/images/Ligue.svg') }}" alt="Ligue"
-                            class="img-responsive w-24" />
+                            src="{{ URL::asset('/images/Ligue.svg') }}" alt="Ligue" class="img-responsive w-24" />
                     </x-responsive-nav-link>
 
                     {{-- Effectifs : --}}
@@ -73,8 +71,7 @@
 
                     {{-- Stades : --}}
                     <x-responsive-nav-link href="{{ route('structure') }}" :active="request()->routeIs('structure')">
-                        <img src="{{ URL::asset('/images/stadium.svg') }}" alt="Stade"
-                            class="img-responsive w-24" />
+                        <img src="{{ URL::asset('/images/stadium.svg') }}" alt="Stade" class="img-responsive w-24" />
                     </x-responsive-nav-link>
 
                     {{-- Transfers : --}}
