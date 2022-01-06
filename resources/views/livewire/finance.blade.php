@@ -8,6 +8,18 @@
         </div>
         <div class="flex flex-1 flex-col">
 
+            @if($depense_club->depense != null)
+            <div class="flex flex-1 flex-col m-2">
+                {{$depense_club->depense  $depense_club->description}}
+            </div>
+            @endif
+
+            @if($depense_club->depense == null)
+            <div class="flex flex-1 flex-col m-2">
+                Vous avez aucune depense récente
+            </div>
+            @endif
+
         </div>
     </div>
 

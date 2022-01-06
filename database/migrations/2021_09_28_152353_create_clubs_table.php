@@ -31,6 +31,7 @@ class CreateClubsTable extends Migration
             $table->foreignId('centre_entrainement_id')->default(1)->constrained();
             $table->foreignId('centre_jeune_id')->default(1)->constrained();
             $table->foreignId('sponsor_id')->nullable()->constrained();
+            $table->foreignId('depense_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

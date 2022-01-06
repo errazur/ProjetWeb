@@ -5,7 +5,7 @@
 @section('content')
 
 
-<livewire:finance :clubuser="$clubuser"/>
+<livewire:finance />
 
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Club;
 use App\Models\User;
 use App\Models\Joueur;
+use App\Models\depense;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,12 @@ class crea_club_joueurController extends Controller
         $data['user_id'] = Auth::user()->id;
 
         $club = Club::create($data);
+
+        $data_depense['mois3'] = 50;
+        $data_depense['mois2'] = 50;
+        $data_depense['club_id'] = $club->id;
+
+        $depense_club = depense::create($data_depense);
 
         // Création du premier Gardien de but
         $gc = \App\Models\Joueur::factory(2)->postes('GC')->create(['club_id' => $club->id]);
