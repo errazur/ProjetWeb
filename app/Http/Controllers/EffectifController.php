@@ -9,8 +9,8 @@ class EffectifController extends Controller
 {
 
     public function effectifAction(){
-       $clubuser = Auth::user()->clubUser;
-       return view('effectif',compact('clubuser'));
+
+       return view('effectif');
 
     }
 }

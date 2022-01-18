@@ -4,20 +4,21 @@ namespace App\Http\Livewire;
 
 use App\Models\Joueur;
 use Livewire\Component;
+use App\Models\Centre_entrainement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class Training extends Component
 {
 
-    public $clubuser;
-    public $centre_entrainement;
-    public $joueurs;
-
-
     public function render()
     {
-        return view('livewire.training');
+
+        $clubuser = Auth::user()->clubUser;
+        $joueurs = $clubuser->joueurs;
+        $centre_entrainement = Centre_entrainement::where('id', $clubuser->centre_entrainement_id)->first();
+
+        return view('livewire.training', compact('joueurs', 'clubuser', 'centre_entrainement'));
     }
 
     public function entrainementLaunch()

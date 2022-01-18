@@ -21,12 +21,12 @@
 
 
                 <div id="date" class="flex items-center">
-                    {{ $clubuser->nom }} FC
+                    {{ Auth::user()->clubUser->nom }} FC
                 </div>
 
                 <div id="Argent_club" class="flex flex-row items-center">
                     <img src="{{ URL::asset('/images/dollars.svg') }}" alt="" class="img-responsive h-10" />
-                    {{ $clubuser->Argent }}M
+                    {{ Auth::user()->clubUser->Argent }}M
                 </div>
 
                 <!-- Settings Dropdown -->

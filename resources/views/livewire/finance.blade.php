@@ -8,13 +8,13 @@
         </div>
         <div class="flex flex-1 flex-col">
 
-            @if($depense_club->depense != null)
+            @if($depense_nom != null)
             <div class="flex flex-1 flex-col m-2">
-                {{$depense_club->depense  $depense_club->description}}
+                {{$depense_desc}} {{$depense_nom}}
             </div>
             @endif
 
-            @if($depense_club->depense == null)
+            @if($depense_nom == null)
             <div class="flex flex-1 flex-col m-2">
                 Vous avez aucune depense récente
             </div>

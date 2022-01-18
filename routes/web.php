@@ -44,9 +44,14 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/creation', [crea_club_joueurController::class, 'indexAction'])->name('Creation');
 
-    Route::post('/creation', [crea_club_joueurController::class, 'CreationClub']);
+    // Protection qui bloque si la personne à un club
+    Route::middleware(['NoClub'])->group(function () {
+
+        Route::get('/creation', [crea_club_joueurController::class, 'indexAction'])->name('Creation');
+
+        Route::post('/creation', [crea_club_joueurController::class, 'CreationClub']);
+    });
 
 /*-----------------------------------------------------------------------------------------------------------------------------------
 | Route qui nécessite de avoir un club                                                                                            |

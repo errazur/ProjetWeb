@@ -16,6 +16,10 @@ class Finance extends Component
 
         $depense_club = depense::where('club_id', $clubuser->id)->first();
 
-        return view('livewire.finance', compact('clubuser', 'depense_club'));
+        $depense_nom = $depense_club->depense;
+
+        $depense_desc = $depense_club->description;
+
+        return view('livewire.finance', compact('clubuser', 'depense_club','depense_nom','depense_desc'));
     }
 }

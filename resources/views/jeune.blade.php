@@ -3,7 +3,7 @@
 
 @section('content')
 
-<livewire:young :clubuser="$clubuser" />
+<livewire:young />
 
 
 
