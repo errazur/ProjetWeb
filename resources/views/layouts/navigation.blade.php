@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-violet-pastel">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
 
@@ -15,9 +15,9 @@
 
             @auth
 
-                <div class="invisible hidden md:visible md:flex md:items-center">
+                {{-- <div class="invisible hidden md:visible md:flex md:items-center">
                     <livewire:clock />
-                </div>
+                </div> --}}
 
 
                 <div id="date" class="flex items-center">

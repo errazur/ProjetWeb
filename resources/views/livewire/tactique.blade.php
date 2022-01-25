@@ -1,6 +1,6 @@
-<div class="flex flex-1 flex-row bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+<div class="container flex flex-1 md:flex-row flex-col bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
 
-    <div class="flex flex-1 flex-col shadow-lg rounded-md m-2">
+    <div class="flex flex-1 flex-col shadow-lg rounded-md mt-2 mb-2 md:m-2">
 
         <div class="flex flex-1 bg-center bg-terrain w-full bg-contain bg-no-repeat">
             <div class="grid grid-cols-6 gap-4 w-full m-3">
@@ -411,12 +411,12 @@
                     <table class="min-w-full divide-y divide-gray-200 m-2 text-gray-400">
                         <thead class="text-gray-200">
                             <tr class="">
-                                <th class="py-3 uppercase tracking-wider" scope="col">!</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">#</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">Nom du joueurs</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">Poste</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">Endurance</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">Forme</th>
+                                <th class="py-3 md:uppercase tracking-wider" scope="col">!</th>
+                                <th class="py-3 md:uppercase tracking-wider" scope="col">#</th>
+                                <th class="py-3 md:uppercase tracking-wider" scope="col">Nom du joueurs</th>
+                                <th class="py-3 md:uppercase tracking-wider" scope="col">Poste</th>
+                                <th class="py-3 md:uppercase tracking-wider" scope="col">Endurance</th>
+                                <th class="py-3 md:uppercase tracking-wider invisible hidden md:visible md:table-cell" scope="col">Forme</th>
                             </tr>
                         </thead>
                         <tbody wire:sortable="updateJoueurOrder">
@@ -431,7 +431,7 @@
                                         </a></td>
                                     <td>{{ $joueur->poste }}</td>
                                     <td>{{ $joueur->energie }}</td>
-                                    <td>{{ $joueur->forme }}</td>
+                                    <td class="invisible hidden md:visible md:table-cell">{{ $joueur->forme }}</td>
 
                                 </tr>
                             @endforeach
@@ -458,7 +458,7 @@
                                 <th class="py-3 uppercase tracking-wider" scope="col">Nom du joueurs</th>
                                 <th class="py-3 uppercase tracking-wider" scope="col">Poste</th>
                                 <th class="py-3 uppercase tracking-wider" scope="col">Endurance</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">Forme</th>
+                                <th class="py-3 uppercase tracking-wider invisible hidden md:visible md:table-cell" scope="col">Forme</th>
                             </tr>
                         </thead>
                         <tbody wire:sortable="updateJoueurOrder">
@@ -473,7 +473,7 @@
                                         </a></td>
                                     <td>{{ $joueur->poste }}</td>
                                     <td>{{ $joueur->energie }}</td>
-                                    <td>{{ $joueur->forme }}</td>
+                                    <td class="invisible hidden md:visible md:table-cell">{{ $joueur->forme }}</td>
 
                                 </tr>
                             @endforeach
@@ -500,7 +500,7 @@
                                 <th class="py-3 uppercase tracking-wider" scope="col">Nom du joueurs</th>
                                 <th class="py-3 uppercase tracking-wider" scope="col">Poste</th>
                                 <th class="py-3 uppercase tracking-wider" scope="col">Endurance</th>
-                                <th class="py-3 uppercase tracking-wider" scope="col">Forme</th>
+                                <th class="py-3 uppercase tracking-wider invisible hidden md:visible md:table-cell" scope="col">Forme</th>
                             </tr>
                         </thead>
                         <tbody wire:sortable="updateJoueurOrder">
@@ -515,7 +515,7 @@
                                         </a></td>
                                     <td>{{ $joueur->poste }}</td>
                                     <td>{{ $joueur->energie }}</td>
-                                    <td>{{ $joueur->forme }}</td>
+                                    <td class="invisible hidden md:visible md:table-cell">{{ $joueur->forme }}</td>
 
                                 </tr>
                             @endforeach

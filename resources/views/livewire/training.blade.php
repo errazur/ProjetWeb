@@ -40,7 +40,7 @@
             Entrainements personnalisé :
         </div>
 
-        <form action="{{ route('entrainement') }}" method="post">
+        <form action="{{ route('entrainement') }}" method="POST">
             @csrf
 
             <div class="m-4">
@@ -52,7 +52,7 @@
                     <li><input type="radio" name="trainingType" value="dribble">Dribble</li>
                     <li><input type="radio" name="trainingType" value="tir">Tir</li>
                     <li><input type="radio" name="trainingType" value="passe">Passe</li>
-                    <li><input type="radio" name="trainingType" value="defense">Defense</li>Défense</li>
+                    <li><input type="radio" name="trainingType" value="defense">Defense</li>
                     <li><input type="radio" name="trainingType" value="force">Force</li>
                 </ul>
 
@@ -90,7 +90,7 @@
             </div>
 
             <div class="flex flex-row justify-around mt-4 mb-4 ">
-                <button
+                <button type="submit"
                     class="inline-flex items-center px-4 py-2 bg-bleu-pastel border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                     commencer
                 </button>

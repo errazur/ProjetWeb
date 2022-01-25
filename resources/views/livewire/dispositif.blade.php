@@ -1,4 +1,4 @@
-<div class="m-2 text-gray-400">
+<div class="md:m-2 text-gray-400">
 
     <div class="">
 
@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <div class="m-4 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+        <div class=" bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
             <ul class="py-2">
                 @foreach ($joueurs as $joueur)
                     <li class="bg-gray-200 shadow-lg text-black rounded-md ring-1 ring-black ring-opacity-5 m-3">

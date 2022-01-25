@@ -11,6 +11,55 @@ use Illuminate\Support\Facades\Redirect;
 class Training extends Component
 {
 
+    public function entrainementLaunch()
+    {
+        $clubuser = Auth::user()->clubUser;
+
+        $data = request()->validate([
+            'trainingType' => '',
+            'joueur' => '',
+        ]);
+
+        if ($data != []) {
+            dd($data);
+            if ($data['trainingType'] != [] && $data['joueur'] != []) {
+
+                    $joueurs = Joueur::findMany($data['joueur']);
+                    $trainingType = $data['trainingType'];
+
+                    foreach ($joueurs as $joueur) {
+
+                        $endurance_joueur = $joueur->energie;
+                        $forme_joueur = $joueur->forme;
+                        $trainingUpgrade = $joueur->$trainingType;
+
+                        Joueur::where('id', $joueur->id)
+                            ->update([
+                                'energie' => $endurance_joueur - 20,
+                                'forme' => $forme_joueur + 7
+                            ]);
+                        if ($joueur->forme > 80) {
+                            Joueur::where('id', $joueur->id)
+                                ->update([
+                                    $trainingUpgrade++
+                                ]);
+                        };
+                    };
+
+                    return redirect('/Entrainement');
+
+            } else {
+
+                $this->emit('flash', 'Tu dois selectionner un type et au moins un joueur avant de lancer l\'entrainement', 'error');
+
+            }
+        } else {
+
+            $this->emit('flash', 'Tu dois selectionner un type et au moins un joueur avant de lancer l\'entrainement', 'error');
+        }
+
+    }
+
     public function render()
     {
 
@@ -21,45 +70,4 @@ class Training extends Component
         return view('livewire.training', compact('joueurs', 'clubuser', 'centre_entrainement'));
     }
 
-    public function entrainementLaunch()
-    {
-        $clubuser = Auth::user()->clubUser;
-
-        $data = request()->validate([
-            'trainingType' => 'min:1',
-            'joueur' => 'min:1'
-        ]);
-
-        if($data == []){
-
-            $this->emit('flash', 'Tu dois selectionner un type et au moins un joueur avant de lancer l\'entrainement', 'info');
-            return back();
-
-        }
-
-        $joueurs = Joueur::findMany($data['joueur']);
-        $trainingType = $data['trainingType'];
-
-        foreach ($joueurs as $joueur) {
-
-            $endurance_joueur = $joueur->energie;
-            $forme_joueur = $joueur->forme;
-            $trainingUpgrade = $joueur->$trainingType;
-
-            Joueur::where('id', $joueur->id)
-                ->update([
-                    'energie' => $endurance_joueur - 20,
-                    'forme' => $forme_joueur + 7
-                ]);
-            if($joueur->forme > 80){
-                Joueur::where('id', $joueur->id)
-                ->update([
-                    $trainingUpgrade++
-                ]);
-            };
-
-        };
-
-        return redirect('/Entrainement');
-    }
 }
