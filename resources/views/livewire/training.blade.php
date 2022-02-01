@@ -14,7 +14,7 @@
             Entrainements rapide :
         </div>
 
-        <div class="flex flex-row justify-around mt-4 mb-4 ">
+        <div class="flex md:flex-row flex-col justify-around mt-4 mb-4 space-y-2">
             <button
                 class="inline-flex items-center px-4 py-2 bg-bleu-pastel border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                 petit
@@ -45,7 +45,7 @@
 
             <div class="m-4">
 
-                <ul class="flex flex-row justify-around">
+                <ul class="flex md:flex-row flex-col justify-around">
                     <li><input type="radio" name="trainingType" value="plongeon">Plongeon</li>
                     <li><input type="radio" name="trainingType" value="reflexe">Réflexe</li>
                     <li><input type="radio" name="trainingType" value="vitesse">Vitesse</li>
@@ -61,16 +61,18 @@
             <div class="m-4 bg-gray-300 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
                 <ul class="py-2">
                     @foreach ($joueurs as $joueur)
-                        <li
-                            class="bg-gray-200 flex flex-row justify-around shadow-lg rounded-md ring-1 ring-black ring-opacity-5 m-3">
+                        <li class="bg-gray-200 flex flex-row justify-around shadow-lg rounded-md ring-1 ring-black ring-opacity-5 m-3">
                             <a class="hover:underline" href="{{ route('joueur', $joueur) }}">
 
+                                <div class="invisible hidden md:visible md:block">
+                                    {{ $joueur->nom }}
+                                </div>
                                 <div>
-                                    {{ $joueur->nom }} {{ $joueur->prenom }}
+                                    {{ $joueur->prenom }}
                                 </div>
 
                             </a>
-                            <div>
+                            <div class="invisible hidden md:visible md:block">
                                 {{ $joueur->age }}
                             </div>
                             <div>

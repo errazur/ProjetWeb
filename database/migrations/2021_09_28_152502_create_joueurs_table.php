@@ -29,6 +29,8 @@ class CreateJoueursTable extends Migration
             $table->bigInteger('force');
             $table->bigInteger('forme');
             $table->bigInteger('energie');
+            $table->boolean('enVente')->default('0');
+            $table->bigInteger('prix')->nullable();
             $table->foreignId('club_id')->constrained();
             $table->bigInteger('order_position')->default(0);
             $table->timestamps();

@@ -1,6 +1,6 @@
 <div class="flex flex-1 flex-col bg-gray-200 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
 
-    <div class="flex flex-1 flex-row">
+    <div class="flex flex-1 md:flex-row flex-col">
 
         <div class="flex flex-1 flex-col">
             <div id="chart" style="height: 300px;" class="m-2"></div>

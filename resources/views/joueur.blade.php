@@ -107,6 +107,29 @@
                 </div>
             </div>
         </div>
+
+        @if($clubuser->id == $joueur->club_id)
+        <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
+            <div class="m-4 block font-medium text-gray-700 text-2xl">
+                mettre sur le marcher :
+            </div>
+            <div class="ml-8 mb-4">
+                <div class=" block font-medium text-gray-700 text-2xl">
+                    <form action="{{route('joueur.vente', $joueur)}}" method="POST">
+                        @csrf
+                        <x-label for="prix_joueur" :value="__('Prix du joueur :')" />
+                        <x-input id="prix_joueur" class="block mt-1 w-full" type="text" name="prix" :value="old('prix')"
+                            required />
+
+                        <x-button class="ml-4">
+                            {{ __('Mettre') }}
+                        </x-button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @endif
+
     </div>
 
 

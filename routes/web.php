@@ -82,6 +82,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/Jeune', [JeuneController::class, 'jeuneAction'])->name('jeune');
 
             Route::get('/joueur/{joueur}', [JoueurController::class, 'joueurAction'])->name('joueur');
+
+            Route::post('/joueur/{joueur}', [JoueurController::class, 'vente'])->name('joueur.vente');
         });
 
     });

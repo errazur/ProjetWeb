@@ -22,6 +22,8 @@ class Joueur extends Model
         'physique',
         'forme',
         'energie',
+        'prix',
+        'enVente',
     ];
 
 

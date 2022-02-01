@@ -16,12 +16,12 @@ class Training extends Component
         $clubuser = Auth::user()->clubUser;
 
         $data = request()->validate([
-            'trainingType' => '',
-            'joueur' => '',
+            'trainingType' => 'required',
+            'joueur' => 'required',
         ]);
 
         if ($data != []) {
-            dd($data);
+
             if ($data['trainingType'] != [] && $data['joueur'] != []) {
 
                     $joueurs = Joueur::findMany($data['joueur']);
