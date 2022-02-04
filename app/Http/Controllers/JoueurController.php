@@ -19,16 +19,13 @@ class JoueurController extends Controller
 
         $data = request()->validate([
             'prix' => 'required',
-
         ]);
 
-        dd($joueur);
-
-        $myJoueur = Joueur::where('id', $joueurs->id)->update([
+        $myJoueur = Joueur::where('id', $joueur->id)->update([
             'enVente' => '1',
             'prix' => $data['prix'],
         ]);
 
-        return redirect('/Accueil');
+        return redirect('/Transfert');
     }
 }

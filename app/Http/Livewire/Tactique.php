@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class Tactique extends Component
 {
 
-    public $poste1 = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'BU','BU', 'REM1','REM2','REM3','REM4'];
-    public $poste2 = ['','GC', 'DD','DC','DC', 'DG','MC','MC','MC', 'AG', 'AD','BU', 'REM1','REM2','REM3','REM4'];
-    public $poste3 = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'MOC','BU', 'REM1','REM2','REM3','REM4'];
+    public $poste1 = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'BU','BU', 'REM1','REM2','REM3','REM4','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES'];
+    public $poste2 = ['','GC', 'DD','DC','DC', 'DG','MC','MC','MC', 'AG', 'AD','BU', 'REM1','REM2','REM3','REM4','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES'];
+    public $poste3 = ['','GC', 'DD','DC','DC', 'DG','MD','MC','MC', 'MG', 'MOC','BU', 'REM1','REM2','REM3','REM4','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES','RES'];
 
 
     public function updateJoueurOrder($items)
@@ -73,7 +73,10 @@ class Tactique extends Component
     public function render()
     {
         $clubuser = Auth::user()->clubUser;
-        $joueurs = Joueur::where('club_id', $clubuser->id)->orderBy('order_position', 'asc')->get();
+        $joueurs = Joueur::where('club_id', $clubuser->id)
+        ->where('enVente', '0')
+        ->orderBy('order_position', 'asc')
+        ->get();
 
         $joueur1 = Joueur::where('club_id', $clubuser->id)->where('order_position',1)->first();
         $joueur2 = Joueur::where('club_id', $clubuser->id)->where('order_position',2)->first();

@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 class TransfertController extends Controller
 {
     public function transfertAction(){
-        $clubuser = Auth::user()->clubUser;
-        return view('transfert',compact('clubuser'));
+
+        return view('transfert');
 
     }
 }
