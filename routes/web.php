@@ -3,6 +3,7 @@
 use App\Models\Club;
 use App\Models\User;
 use App\Models\Joueur;
+use App\Http\Livewire\Marche;
 use App\Http\Livewire\Training;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -76,6 +77,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/Structure', [StructureController::class, 'structureAction'])->name('structure');
 
             Route::get('/Transfert', [TransfertController::class, 'transfertAction'])->name('transfert');
+
+            Route::post('/Transfert', [Marche::class, 'achat'])->name('transfert.joueur');
 
             Route::get('/Finance', [FinanceController::class, 'financeAction'])->name('finance');
 

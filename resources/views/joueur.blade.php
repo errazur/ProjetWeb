@@ -91,7 +91,7 @@
 
             <div class="ml-8 mb-4">
                 <div class=" block font-medium text-gray-700 text-2xl">
-                    Force : {{ $joueur->physique }}
+                    Force : {{ $joueur->force }}
                 </div>
             </div>
 
@@ -111,7 +111,7 @@
         @if($clubuser->id == $joueur->club_id)
         <div class="m-4 shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
             <div class="m-4 block font-medium text-gray-700 text-2xl">
-                mettre sur le marcher :
+                mettre sur le marché :
             </div>
             <div class="ml-8 mb-4">
                 <div class=" block font-medium text-gray-700 text-2xl">
@@ -119,7 +119,7 @@
                         @csrf
                         <x-label for="prix_joueur" :value="__('Prix du joueur :')" />
                         <x-input id="prix_joueur" class="block mt-1 w-full" type="text" name="prix" :value="old('prix')"
-                            required />
+                            required /><div>M</div>
 
                         <x-button class="ml-4">
                             {{ __('Mettre') }}

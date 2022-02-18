@@ -27,7 +27,7 @@ class FinanceChart extends BaseChart
         $moisnow = $clubuser->Argent;
 
         return Chartisan::build()
-            ->labels(['3ème mois','2ème mois','mois actuelle'])
+            ->labels(['3ème mois','2ème mois','mois actuel'])
             ->dataset('Argent', [$mois3, $mois2, $moisnow]);
     }
 }

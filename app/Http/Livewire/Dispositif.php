@@ -15,7 +15,6 @@ class Dispositif extends Component
 
         $clubuser = Club::where('user_id', Auth::id())->first();
         $joueurs = Joueur::where('club_id', $clubuser->id)
-        ->where('enVente', '0')
         ->orderBy('id', 'asc')
         ->get();
 
