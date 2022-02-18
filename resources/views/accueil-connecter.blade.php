@@ -6,8 +6,8 @@
 
 
 
-        <div class="flex flex-row mb-28">
-            <div>
+        <div class="flex flex-col md:flex-row mb-28">
+            <div class="flex flex-1">
                 <img src=" {{ URL::asset('/images/terrain.jpg') }}" alt=""
                     class="img-responsive box-border m-4 w-8/12 border-8 border-violet" />
                 <div class="text-black text-4xl -mt-36 ml-44">

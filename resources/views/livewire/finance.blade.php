@@ -10,7 +10,7 @@
 
             @if($depense_nom != null)
             <div class="flex flex-1 flex-col m-2">
-                {{$depense_desc}} {{$depense_nom}}
+                {{$depense_desc}} {{$depense_nom}}M
             </div>
             @endif
 
