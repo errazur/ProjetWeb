@@ -16,6 +16,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
 </head>
 
 <body class="font-sans antialiased bg-violet">
@@ -138,9 +139,9 @@
         <!-- Page Content -->
         <main class="">
             <div id="présentation" class="flex flex-col items-center bg-violet-pastel m-10">
-                <div id="carrouselle">
+                <div class="container">
                     <img src="{{ URL::asset('/images/photo_de_couverture.jpg') }}" alt="photo de couverture"
-                        class="img-responsive m-2 mt-6 flex-shrink-0 flex items-center">
+                        class="m-2 mt-6 flex-shrink-0 flex items-center container">
                 </div>
                 <div class="flex-shrink-0 flex items-center mb-2">
                     Rejoignez pleins d’autres joueurs et monter votre club au sommet !
@@ -166,7 +167,7 @@
                     @endguest
                 </div>
             </div>
-            <div id="fonctionnalité présenté">
+            <div id="fonctionnalité présenté" class="flex flex-1">
 
             </div>
         </main>
