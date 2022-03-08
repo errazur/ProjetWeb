@@ -44,8 +44,6 @@ class Club extends Model
     function matchClub(){
         return $this->hasMany(Match::class);
     }
-
-
 }
 
 
