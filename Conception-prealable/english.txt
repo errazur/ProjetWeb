@@ -1,0 +1,16 @@
+Hello, my name is Cyril Valette i am 22yo, i am currently in training to 
+become a web and web app developper in Callac Soft College. 
+For the last past years i was working as a temporary worker in differente 
+company. I am going to introduce you to my web project wich is call 
+stars of football. 
+The idea of the project its the user will create a club of football 
+and manage the footballer,training, transfer, tactics, league. 
+Users can also make match between the two Users.
+To make the project i used Laravel as the framework for my project 
+with all the positive point like all the librairy : 
+Eloquent, tailwind css, Livewire ect.
+To program the project i used PHP, HMTL, CSS, JS, MYSQL.
+The point of the site is to make the information to the user really
+easy to understand at first but if he look far away there would be
+more details information.
+There will be few pages of each things you can manage in the club.
